@@ -1,9 +1,15 @@
 {
-  "event_id": "092108-007-sample-001",
-  "event_type": "SERIAL_HELD",
+  "event_id": "evt-00000001",
+  "event_type": "EDITION_REGISTERED",
   "aggregate_type": "edition",
-  "aggregate_id": "digital_calligraphy_fulfillment-001",
+  "aggregate_id": "ed-calligraphy-001",
   "occurred_at": "2026-09-20T18:00:00+08:00",
   "version": 1,
-  "summary": "登记数字草书限量履约的首条领域记录"
+  "summary": "登记数字草书版次：总量 300，保留序号 1-20，实体装裱额度 12",
+  "payload": {
+    "edition_id": "ed-calligraphy-001",
+    "total_supply": 300,
+    "reserved_ranges": [[1, 20]],
+    "physical_quota": 12
+  }
 }

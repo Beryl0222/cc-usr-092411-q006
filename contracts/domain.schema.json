@@ -19,10 +19,29 @@
     "event_type": {
       "type": "string",
       "enum": [
+        "EDITION_REGISTERED",
         "SERIAL_HELD",
+        "SERIAL_HOLD_EXPIRED",
         "PAYMENT_CONFIRMED",
+        "PAYMENT_REVOKED",
+        "REALNAME_APPROVED",
+        "REALNAME_REJECTED",
+        "REGISTRATION_SUBMITTED",
         "REGISTRATION_ACCEPTED",
+        "REGISTRATION_FAILED",
+        "OWNERSHIP_CONFIRMED",
+        "ORDER_RELEASED",
+        "RECEIPT_QUARANTINED",
+        "SHIPMENT_CREATED",
+        "ADDRESS_CHANGE_REQUESTED",
+        "ADDRESS_CHANGE_APPROVED",
+        "ADDRESS_CHANGE_REJECTED",
         "PHYSICAL_DISPATCHED",
+        "SHIPMENT_DELIVERED",
+        "SHIPMENT_RETURNED",
+        "SHIPMENT_RESTOCKED",
+        "SHIPMENT_CANCELLED",
+        "REMEDIATION_OPENED",
         "ORDER_REMEDIED"
       ]
     },
@@ -32,6 +51,7 @@
         "edition",
         "serial_reservation",
         "purchase_order",
+        "shipment",
         "fulfillment_case"
       ]
     },
@@ -50,6 +70,10 @@
     "summary": {
       "type": "string",
       "minLength": 1
+    },
+    "payload": {
+      "type": "object",
+      "description": "业务数据；事件的标识、发生时间与版本不可原地改写，更正应产生后继事件"
     }
   },
   "additionalProperties": true
