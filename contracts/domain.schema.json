@@ -19,11 +19,31 @@
     "event_type": {
       "type": "string",
       "enum": [
+        "EDITION_REGISTERED",
         "SERIAL_HELD",
+        "SERIAL_HOLD_EXPIRED",
+        "SERIAL_RESERVATION_LINKED",
+        "SERIAL_RESERVATION_RELEASED",
+        "SERIAL_OWNERSHIP_REGISTERED",
         "PAYMENT_CONFIRMED",
+        "PAYMENT_REVOKED",
+        "IDENTITY_REVIEW_PASSED",
+        "IDENTITY_REVIEW_REJECTED",
+        "REGISTRATION_SUBMITTED",
         "REGISTRATION_ACCEPTED",
+        "REGISTRATION_FAILED",
+        "SHIPMENT_TASK_CREATED",
+        "ADDRESS_CHANGE_REQUESTED",
+        "ADDRESS_CHANGE_APPROVED",
+        "ADDRESS_CHANGE_REJECTED",
         "PHYSICAL_DISPATCHED",
-        "ORDER_REMEDIED"
+        "SHIPMENT_DELIVERED",
+        "SHIPMENT_RETURNED",
+        "ORDER_QUARANTINED",
+        "ORDER_QUARANTINE_CLEARED",
+        "ORDER_REMEDIED",
+        "REMEDY_CASE_OPENED",
+        "REMEDY_RESOLVED"
       ]
     },
     "aggregate_type": {
@@ -50,6 +70,12 @@
     "summary": {
       "type": "string",
       "minLength": 1
+    },
+    "causation_id": {
+      "type": ["string", "null"]
+    },
+    "payload": {
+      "type": "object"
     }
   },
   "additionalProperties": true
